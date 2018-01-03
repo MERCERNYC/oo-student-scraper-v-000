@@ -14,7 +14,7 @@ class Student
   #constructor
 
   def self.create_from_collection(students_array)
-
+    students_array.each {|student_hash| @@all << self.new(student_hash)}
   end
 
   def add_student_attributes(attributes_hash)
