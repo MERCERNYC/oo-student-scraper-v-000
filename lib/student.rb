@@ -14,11 +14,11 @@ class Student
   #constructor
 
   def self.create_from_collection(students_array)
-    students_array.each {|student_hash| @@all << self.new(student_hash)}
+    students_array.each do |student_hash| @@all << self.new(student_hash)
   end
 
   def add_student_attributes(attributes_hash)
-    attributes_hash.each {|key, value| self.send(("#{key}="), value)}
+    attributes_hash.each do |key, value| self.send(("#{key}="), value)
 
   end
 
